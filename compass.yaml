@@ -1,4 +1,8 @@
+# TEST:   Valid compass.yaml in a FORKED repository (fork of octocat/Hello-World).
+# EXPECT: Repository counted in repositories_out_of_scope; NOT scanned; no entity.
+# WHY:    Forks would duplicate the upstream's components.
 configVersion: 1
 name: SHOULD NOT APPEAR - forked repository
 typeId: SERVICE
 slug: fork-service
+description: The repository is a fork, so this valid file must be ignored.
